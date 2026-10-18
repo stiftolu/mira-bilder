@@ -37,13 +37,12 @@
   "dateien": [
    "plan/Tag-01/01_K1-S1-korsage-fenster.jpg",
    "plan/Tag-01/02_K1-S2-mappe-sideboard.jpg",
-   "plan/Tag-01/03_K01-S3-kuecheninsel.jpg",
+   "plan/Tag-01/03_K1-S3-kuecheninsel-espresso.jpg",
    "plan/Tag-01/04_K1-S4-spiegel-bad.jpg",
    "plan/Tag-01/05_K1-S5-kuechenfenster-schulter.jpg",
    "plan/Tag-01/06_K1-S6-sessellehne-pumps.jpg",
    "plan/Tag-01/07_K1-S7-selfie-tuer-schluessel.jpg",
-   "plan/Tag-01/08_K1-S8-tuer-blick-zurueck.jpg",
-   "plan/Tag-01/09_K1-S3-kuecheninsel-espresso.jpg"
+   "plan/Tag-01/08_K1-S8-tuer-blick-zurueck.jpg"
   ],
   "text": "Dienstag, 7 Uhr: Espresso, Blazer, erster Termin. Wie fängt eure Woche an?"
  },
@@ -74,16 +73,6 @@
   "art": "STORY",
   "dateien": [
    "plan/Tag-02/12-30_T02-1230-leere-wohnung-dreht-sich.jpg"
-  ],
-  "text": null
- },
- {
-  "key": "Tag-02 story 17-30_T02-story-1730-wohnzimmer-tasche.png",
-  "datum": "2026-10-22",
-  "zeit": "17:30",
-  "art": "STORY",
-  "dateien": [
-   "plan/Tag-02/17-30_T02-story-1730-wohnzimmer-tasche.jpg"
   ],
   "text": null
  },
@@ -1307,6 +1296,54 @@
   "art": "STORY",
   "dateien": [
    "plan/Tag-28/21-30_story-nacht-selfie-b.jpg"
+  ],
+  "text": null
+ },
+ {
+  "key": "Tag-29 story 12-30_T02-story-1730-wohnzimmer-tasche.png",
+  "datum": "2026-12-24",
+  "zeit": "12:30",
+  "art": "STORY",
+  "dateien": [
+   "plan/Tag-29/12-30_T02-story-1730-wohnzimmer-tasche.jpg"
+  ],
+  "text": null
+ },
+ {
+  "key": "Tag-29 story 17-30_training-12-buero-abends.jpg",
+  "datum": "2026-12-24",
+  "zeit": "17:30",
+  "art": "STORY",
+  "dateien": [
+   "plan/Tag-29/17-30_training-12-buero-abends.jpg"
+  ],
+  "text": null
+ },
+ {
+  "key": "Tag-29 karussell",
+  "datum": "2026-12-24",
+  "zeit": "19:00",
+  "art": "KARUSSELL",
+  "dateien": [
+   "plan/Tag-29/01_training-19-steg.jpg",
+   "plan/Tag-29/02_training-01-bett.jpg",
+   "plan/Tag-29/03_training-03-garage.jpg",
+   "plan/Tag-29/04_training-08-badeanzug.jpg",
+   "plan/Tag-29/05_training-22-boden.jpg",
+   "plan/Tag-29/06_profil-selfie-bad-neu.jpg",
+   "plan/Tag-29/07_K10-S1-creole-einstecken.jpg",
+   "plan/Tag-29/08_hof-g-klasse-einsteigen.jpg",
+   "plan/Tag-29/09_K01-S3-kuecheninsel.jpg"
+  ],
+  "text": "Mein Jahr in 9 Bildern. Welches ist euer Lieblingsbild?"
+ },
+ {
+  "key": "Tag-29 story 20-30_training-18-geburtstag.jpg",
+  "datum": "2026-12-24",
+  "zeit": "20:30",
+  "art": "STORY",
+  "dateien": [
+   "plan/Tag-29/20-30_training-18-geburtstag.jpg"
   ],
   "text": null
  }
