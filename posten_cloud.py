@@ -80,6 +80,15 @@ def container(s, token):
     return cid
 
 
+def schon_online(cid, token):
+    """Instagram meldet beim Veröffentlichen manchmal einen Fehler (oder antwortet zu spät), obwohl der Beitrag online ist.
+    Der Container steht dann auf PUBLISHED → nicht noch einmal posten."""
+    try:
+        return api("GET", cid, {"fields": "status_code"}, token).get("status_code") == "PUBLISHED"
+    except Exception:
+        return False
+
+
 def token_holen():
     t = os.environ.get("IG_TOKEN", "").strip()
     if not t:
@@ -114,19 +123,33 @@ def main():
     if not faellig:
         return 0
     token = token_holen()
+    offen = fertig.setdefault("_container", {})   # Container, die veröffentlicht werden sollten, aber mit Fehler endeten
     fehler = 0
     for s in faellig:
-        try:
-            cid = container(s, token)
-            mid = api("POST", IG_ID + "/media_publish", {"creation_id": cid}, token)["id"]
-            fertig[s["key"]] = {"id": mid, "zeit": datetime.datetime.now(BERLIN).isoformat(timespec="seconds")}
-            schreibe("gepostet.json", fertig)   # sofort merken, damit nichts doppelt kommt
-            print("ONLINE", s["key"], mid)
-        except Exception as ex:
-            fehler += 1
-            versuche[s["key"]] = versuche.get(s["key"], 0) + 1
-            schreibe("gepostet.json", fertig)
-            print("FEHLER", s["key"], "Versuch", versuche[s["key"]], ex)
+        k, cid, mid = s["key"], None, None
+        if k in offen and schon_online(offen[k], token):   # letzter Versuch kam doch an
+            mid = "Container " + offen[k]
+        else:
+            try:
+                cid = container(s, token)
+                offen[k] = cid
+                schreibe("gepostet.json", fertig)
+                mid = api("POST", IG_ID + "/media_publish", {"creation_id": cid}, token)["id"]
+            except Exception as ex:
+                if cid:
+                    time.sleep(30)
+                    if schon_online(cid, token):
+                        mid = "Container " + cid
+                if not mid:
+                    fehler += 1
+                    versuche[k] = versuche.get(k, 0) + 1
+                    schreibe("gepostet.json", fertig)
+                    print("FEHLER", k, "Versuch", versuche[k], ex)
+                    continue
+        fertig[k] = {"id": mid, "zeit": datetime.datetime.now(BERLIN).isoformat(timespec="seconds")}
+        offen.pop(k, None)
+        schreibe("gepostet.json", fertig)   # sofort merken, damit nichts doppelt kommt
+        print("ONLINE", k, mid)
     return 1 if fehler else 0
 
 
