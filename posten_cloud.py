@@ -103,7 +103,15 @@ def main():
     print("%s %s Berlin · fällig: %d" % (heute, uhr, len(faellig)))
     for s in faellig:
         print("  ", s["zeit"], s["art"], s["key"])
-    if trocken or not faellig:
+    if trocken:
+        return 0
+    if fertig.get("_schluessel_geprueft", {}).get("datum") != heute:   # einmal täglich nur lesend prüfen (sichtbar in gepostet.json)
+        token = token_holen()
+        me = api("GET", "me", {"fields": "username"}, token)
+        fertig["_schluessel_geprueft"] = {"datum": heute, "uhr": uhr, "konto": me.get("username")}
+        schreibe("gepostet.json", fertig)
+        print("Schlüssel ok:", me.get("username"))
+    if not faellig:
         return 0
     token = token_holen()
     fehler = 0
