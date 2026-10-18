@@ -1,0 +1,21 @@
+# Einmalige Probe (19.10.2026): kommt eine Telegram-Meldung über die GitHub-Geheimnisse an? Wird danach wieder gelöscht.
+name: Telegram-Probe
+on:
+  push:
+    paths: [".github/workflows/telegram-probe.yml"]
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe-Meldung
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -c "import sys, posten_cloud as p; sys.exit(0 if p.telegram('sendMessage', {'text': '✅ Probe: GitHub kann dir jetzt Mira-Meldungen schicken. Ab Di 20.10. kommt hier jeder Post mit Bildern und Text.'}) else 1)"
