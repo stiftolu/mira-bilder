@@ -9,6 +9,7 @@ concurrency:
   cancel-in-progress: false
 permissions:
   contents: write
+  issues: write
 jobs:
   posten:
     runs-on: ubuntu-latest
@@ -36,3 +37,26 @@ jobs:
             sleep 10
           done
           exit 1
+      # Schlüssel (IG_TOKEN) gilt 60 Tage ab 18.10.2026 → ab 08.12. Issue mit @stiftolu = E-Mail an Marcel; 14.12. zweite Erinnerung
+      - name: Erinnerung Schlüssel
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITEL: "Mira: Instagram-Schlüssel erneuern (läuft ca. 17.12. ab)"
+          TEXT: |
+            @stiftolu Der Instagram-Schlüssel von Mira läuft ca. am 17.12.2026 ab. Ohne neuen Schlüssel postet ab dann nichts mehr (auch nicht der Rückblick am 24.12.).
+
+            So geht es (5 Minuten):
+            1. developers.facebook.com öffnen → Meine Apps → „Mira Planer“ → Instagram → API-Einrichtung.
+            2. Bei mira_sommerfeld_ auf „Token generieren“ klicken, mit Instagram anmelden, Schlüssel kopieren.
+            3. github.com/stiftolu/mira-bilder/settings/secrets/actions öffnen → bei IG_TOKEN auf den Stift → Schlüssel einfügen → „Update secret“.
+            4. Dieses Issue schließen und Claude im Mira-Fenster „/weiter“ schreiben (prüft, ob es geklappt hat).
+        run: |
+          heute=$(TZ=Europe/Berlin date +%F)
+          [ "$heute" \< "2026-12-08" ] && exit 0
+          nr=$(gh issue list --state all --limit 100 --json number,title -q '.[] | select(.title | contains("Schlüssel erneuern")) | .number' | head -1)
+          if [ -z "$nr" ]; then gh issue create --title "$TITEL" --body "$TEXT"; exit 0; fi
+          [ "$heute" \< "2026-12-14" ] && exit 0
+          st=$(gh issue view "$nr" --json state,comments -q '.state + " " + (.comments | length | tostring)')
+          [ "$st" = "OPEN 0" ] && gh issue comment "$nr" --body "@stiftolu Zweite Erinnerung: Schlüssel läuft in ca. 3 Tagen ab (Anleitung oben)."
+          exit 0
