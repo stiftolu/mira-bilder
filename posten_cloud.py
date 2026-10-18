@@ -3,6 +3,9 @@
 Postet jedes Stück aus plan.json, dessen Datum heute (Berlin) ist und dessen Uhrzeit vorbei ist; verpasste Stücke desselben
 Tages werden nachgeholt. Erledigtes steht in gepostet.json (der Ablauf schreibt die Datei danach zurück ins Repository).
 Schlüssel: nur im GitHub-Geheimnis IG_TOKEN (nie im Repository). Gilt 60 Tage ab 18.10.2026 → vor ~15.12. erneuern.
+Telegram (Marcel 19.10.2026, wie bei Eduki): jedes Stück, das online ist, kommt sofort als Meldung mit Bildern + Beitragstext in
+Marcels Chat mit @mira_instagram_bot; nach dem 3. Fehlversuch eine Warnung. Bot-Daten nur in den GitHub-Geheimnissen
+TELEGRAM_TOKEN + TELEGRAM_CHAT_ID; fehlen sie, wird nur nichts gemeldet. Eine gescheiterte Meldung ändert nie etwas am Posten.
 Gebaut von 02_Werkzeuge\\instagram\\cloud_vorbereiten.py (Marcel 18.10.2026: nichts soll an sein müssen).
   python posten_cloud.py              führt aus
   python posten_cloud.py --trocken    zeigt nur, was heute fällig wäre (kein Instagram-Aufruf)"""
@@ -14,12 +17,15 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import uuid
 from zoneinfo import ZoneInfo
 
 API = "https://graph.instagram.com"
 IG_ID = "17841428710863480"   # mira_sommerfeld_
 RAW = "https://raw.githubusercontent.com/stiftolu/mira-bilder/main/"
 BERLIN = ZoneInfo("Europe/Berlin")
+TELEGRAM = "https://api.telegram.org/bot%s/%s"
+WOCHENTAG = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 
 
 def lies(p, leer):
@@ -96,6 +102,77 @@ def token_holen():
     return t
 
 
+def telegram(methode, felder, dateien=()):
+    """Ein Telegram-Aufruf; Dateien werden aus dem Repository hochgeladen (Bauweise wie Eduki telegram_meldung.py)."""
+    tg, chat = os.environ.get("TELEGRAM_TOKEN", "").strip(), os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+    if not (tg and chat):
+        return False   # noch nicht eingerichtet
+    grenze = uuid.uuid4().hex
+    teile = ["--%s\r\nContent-Disposition: form-data; name=\"%s\"\r\n\r\n%s\r\n" % (grenze, k, v)
+             for k, v in dict(felder, chat_id=chat).items()]
+    teile = [t.encode("utf-8") for t in teile]
+    for name, pfad in dateien:
+        art = "video/mp4" if pfad.lower().endswith(".mp4") else "image/jpeg"
+        teile.append(("--%s\r\nContent-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\nContent-Type: %s\r\n\r\n"
+                      % (grenze, name, os.path.basename(pfad), art)).encode("utf-8") + open(pfad, "rb").read() + b"\r\n")
+    teile.append(("--%s--\r\n" % grenze).encode())
+    req = urllib.request.Request(TELEGRAM % (tg, methode), data=b"".join(teile),
+                                 headers={"Content-Type": "multipart/form-data; boundary=" + grenze})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            if not json.load(r).get("ok"):
+                raise RuntimeError("Telegram %s: nicht ok" % methode)
+    except urllib.error.HTTPError as e:   # Fehlertext ohne Bot-Schlüssel (steckt in der Adresse)
+        raise RuntimeError("Telegram %s: %s" % (methode, e.read().decode("utf-8", "replace")[:200]))
+    except Exception as e:   # Lauf-Protokoll ist öffentlich → Schlüssel nie im Text
+        raise RuntimeError("Telegram %s: %s %s" % (methode, type(e).__name__, str(e).replace(tg, "***")[:200]))
+    return True
+
+
+def melden(s, mid, token):
+    """Online-Meldung: Story = Bild, Reel = Video, Karussell = Album mit allen Seiten; Beitragstext + Link darunter."""
+    d = datetime.date.fromisoformat(s["datum"])
+    art = {"STORY": "📱 Story", "REEL": "🎬 Reel"}.get(s["art"], "🖼 Karussell")
+    text = "✅ %s ist online\n%s %s · %s Uhr" % (art, WOCHENTAG[d.weekday()], d.strftime("%d.%m."), s["zeit"])
+    if s.get("text"):
+        text += "\n\n" + s["text"]
+    if token and mid and not str(mid).startswith("Container"):
+        try:
+            link = api("GET", mid, {"fields": "permalink"}, token).get("permalink")
+            if link:
+                text += "\n\n" + link
+        except Exception:
+            pass   # ohne Link melden
+    text = text[:1024]   # Telegram-Grenze für Bildunterschriften
+    dateien = s["dateien"]
+    if s["art"] == "REEL":
+        return telegram("sendVideo", {"caption": text, "supports_streaming": "true"}, [("video", dateien[0])])
+    if s["art"] == "STORY" or len(dateien) == 1:
+        return telegram("sendPhoto", {"caption": text}, [("photo", dateien[0])])
+    medien = [{"type": "photo", "media": "attach://f%d" % i} for i in range(len(dateien))]
+    medien[0]["caption"] = text
+    return telegram("sendMediaGroup", {"media": json.dumps(medien, ensure_ascii=False)},
+                    [("f%d" % i, p) for i, p in enumerate(dateien)])
+
+
+def nachmelden(plan, fertig, heute):
+    """Alles, was heute online ging und noch nicht gemeldet ist (auch nach einem Telegram-Fehler), höchstens 3 Versuche."""
+    token = os.environ.get("IG_TOKEN", "").strip()
+    for s in plan:
+        e = fertig.get(s["key"])
+        if s["datum"] != heute or not isinstance(e, dict) or e.get("telegram") == "ok" or e.get("telegram_fehler", 0) >= 3:
+            continue
+        try:
+            if not melden(s, e.get("id"), token):
+                return   # Bot nicht eingerichtet
+            e["telegram"] = "ok"
+            print("TELEGRAM gemeldet", s["key"])
+        except Exception as ex:
+            e["telegram_fehler"] = e.get("telegram_fehler", 0) + 1
+            print("TELEGRAM FEHLER", s["key"], ex)
+        schreibe("gepostet.json", fertig)
+
+
 def main():
     a = sys.argv[1:]
     trocken = "--trocken" in a
@@ -121,6 +198,7 @@ def main():
         schreibe("gepostet.json", fertig)
         print("Schlüssel ok:", me.get("username"))
     if not faellig:
+        nachmelden(plan, fertig, heute)
         return 0
     token = token_holen()
     offen = fertig.setdefault("_container", {})   # Container, die veröffentlicht werden sollten, aber mit Fehler endeten
@@ -145,11 +223,19 @@ def main():
                     versuche[k] = versuche.get(k, 0) + 1
                     schreibe("gepostet.json", fertig)
                     print("FEHLER", k, "Versuch", versuche[k], ex)
+                    if versuche[k] == 3:   # gibt auf → Marcel Bescheid sagen
+                        try:
+                            telegram("sendMessage", {"text": "⚠️ %s %s Uhr ist nicht online gegangen (3 Versuche).\n"
+                                                     "Schreib im Mira-Fenster „/weiter“." % (s["art"].capitalize(), s["zeit"])})
+                        except Exception as tx:
+                            print("TELEGRAM FEHLER", k, tx)
                     continue
         fertig[k] = {"id": mid, "zeit": datetime.datetime.now(BERLIN).isoformat(timespec="seconds")}
         offen.pop(k, None)
         schreibe("gepostet.json", fertig)   # sofort merken, damit nichts doppelt kommt
         print("ONLINE", k, mid)
+        nachmelden([s], fertig, heute)
+    nachmelden(plan, fertig, heute)   # Meldungen, die vorher gescheitert sind
     return 1 if fehler else 0
 
 
