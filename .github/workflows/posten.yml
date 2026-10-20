@@ -1,45 +1,92 @@
-# Postet Miras Instagram-Plan alle 15 Minuten (Zeiten in UTC; das Programm rechnet selbst in Berliner Zeit).
+# Postet Miras Instagram-Plan (Zeiten in UTC; das Programm rechnet selbst in Berliner Zeit).
+# 20.10.2026: GitHubs Zeitplan kam nur ~4× am Tag statt alle 15 Min → jetzt Dauerlauf: schläft bis zum nächsten Stück
+# (posten_cloud.py --warten), postet, schläft weiter; nach ~5 h 20 startet er sich selbst neu. Endet, wenn in den nächsten
+# 14 h nichts kommt. Der Zeitplan ist nur noch Ersatz-Wecker; läuft schon ein Lauf, endet der neue sofort (nie zwei = nie doppelt).
 name: Mira posten
 on:
   schedule:
-    - cron: "*/15 4-22 * * *"
+    - cron: "4,19,34,49 * * * *"
+  push:   # neuer Plan / neues Programm vom Laptop → sofort starten
+    branches: [main]
+    paths: [plan.json, posten_cloud.py, .github/workflows/posten.yml]
   workflow_dispatch:
-concurrency:
-  group: mira-posten
-  cancel-in-progress: false
+    inputs:
+      neustart:
+        description: "nur intern (Selbst-Neustart)"
+        default: "nein"
 permissions:
   contents: write
   issues: write
+  actions: write
 jobs:
-  posten:
+  pruefen:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 5
+    outputs:
+      los: ${{ steps.p.outputs.los }}
+    steps:
+      - id: p
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [ "${{ inputs.neustart }}" = "ja" ]; then echo "los=ja" >> "$GITHUB_OUTPUT"; exit 0; fi
+          n=$(gh run list --workflow posten.yml --limit 30 --json databaseId,status \
+              -q '[.[] | select(.status != "completed" and .databaseId != ${{ github.run_id }})] | length')
+          if [ "$n" = "0" ]; then echo "los=ja" >> "$GITHUB_OUTPUT"; else echo "Es läuft schon ein Lauf ($n) → nichts zu tun"; fi
+  posten:
+    needs: pruefen
+    if: needs.pruefen.outputs.los == 'ja'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    concurrency:
+      group: mira-posten
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Posten
+      - name: Dauerlauf
+        id: lauf
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           # Meldung an Marcel (@mira_instagram_bot), sobald etwas online ist — fehlen die zwei Geheimnisse, wird nur nicht gemeldet
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python posten_cloud.py
-      - name: Stand sichern
-        if: always()
         run: |
           git config user.name "Mira Planer"
           git config user.email "stiftolu@users.noreply.github.com"
-          git add gepostet.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Stand $(date -u +%F_%H%M)"
-          # Repository kann inzwischen neuer sein (Plan-Änderung vom Laptop) → erst holen, sonst geht der Stand verloren = Doppelposts
-          for i in 1 2 3 4 5; do
-            if git pull --rebase -q origin main; then git push -q origin HEAD:main && exit 0; else git rebase --abort || true; fi
-            sleep 10
+          sichern() {
+            git add gepostet.json
+            git diff --cached --quiet && return 0
+            git commit -q -m "Stand $(date -u +%F_%H%M)"
+            # Repository kann inzwischen neuer sein (Plan-Änderung vom Laptop) → erst holen, sonst geht der Stand verloren = Doppelposts
+            for i in 1 2 3 4 5; do
+              if git pull --rebase -q origin main; then git push -q origin HEAD:main && return 0; else git rebase --abort || true; fi
+              sleep 10
+            done
+            return 1
+          }
+          ende=$(( $(date +%s) + 320 * 60 ))
+          while :; do
+            git pull --rebase -q origin main || { git rebase --abort || true; }
+            python posten_cloud.py || echo "::warning::posten_cloud.py endete mit Fehler (steht oben)"
+            sichern || { echo "::error::Stand nicht gesichert → Abbruch (sonst Doppelposts)"; exit 1; }
+            w=$(python posten_cloud.py --warten)
+            if [ "$w" -lt 0 ]; then echo "In den nächsten 14 h nichts zu posten → Ende"; exit 0; fi
+            [ "$w" -eq 0 ] && w=300   # noch fällig = gerade gescheitert → in 5 Min wieder (nach 3 Versuchen gibt das Programm auf)
+            w=$(( w + 20 ))
+            if [ $(( $(date +%s) + w )) -ge "$ende" ]; then echo "neustart=ja" >> "$GITHUB_OUTPUT"; echo "Zeit um → Neustart"; exit 0; fi
+            echo "Schlafe $w s bis zum nächsten Stück"
+            sleep "$w"
           done
-          exit 1
+      - name: Neustart
+        if: steps.lauf.outputs.neustart == 'ja'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run posten.yml --ref main -f neustart=ja
       # Schlüssel (IG_TOKEN) gilt 60 Tage ab 18.10.2026 → ab 08.12. Issue mit @stiftolu = E-Mail an Marcel; 14.12. zweite Erinnerung
       - name: Erinnerung Schlüssel
         if: always()

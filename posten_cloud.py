@@ -8,7 +8,9 @@ Marcels Chat mit @mira_instagram_bot; nach dem 3. Fehlversuch eine Warnung. Bot-
 TELEGRAM_TOKEN + TELEGRAM_CHAT_ID; fehlen sie, wird nur nichts gemeldet. Eine gescheiterte Meldung ändert nie etwas am Posten.
 Gebaut von 02_Werkzeuge\\instagram\\cloud_vorbereiten.py (Marcel 18.10.2026: nichts soll an sein müssen).
   python posten_cloud.py              führt aus
-  python posten_cloud.py --trocken    zeigt nur, was heute fällig wäre (kein Instagram-Aufruf)"""
+  python posten_cloud.py --trocken    zeigt nur, was heute fällig wäre (kein Instagram-Aufruf)
+  python posten_cloud.py --warten     Sekunden bis zum nächsten offenen Stück (0 = jetzt fällig, -1 = keins in den nächsten 14 h);
+                                      danach richtet der Dauerlauf in posten.yml sein Schlafen (20.10.2026: GitHub-Zeitplan kam nur ~4× am Tag)"""
 import datetime
 import json
 import os
@@ -173,6 +175,19 @@ def nachmelden(plan, fertig, heute):
         schreibe("gepostet.json", fertig)
 
 
+def warten(plan, fertig, jetzt):
+    """Sekunden bis zum nächsten Stück, das noch posten soll; vergangene Tage zählen nicht (holt main ohnehin nicht nach)."""
+    versuche = fertig.get("_fehlversuche", {})
+    sek = []
+    for s in plan:
+        if s["key"] in fertig or versuche.get(s["key"], 0) >= 3 or s["datum"] < jetzt.date().isoformat():
+            continue
+        t = datetime.datetime.fromisoformat("%sT%s" % (s["datum"], s["zeit"])).replace(tzinfo=BERLIN)
+        sek.append(max(0, int((t - jetzt).total_seconds())))
+    m = min(sek, default=-1)
+    return m if 0 <= m <= 14 * 3600 else -1
+
+
 def main():
     a = sys.argv[1:]
     trocken = "--trocken" in a
@@ -180,6 +195,9 @@ def main():
     plan = lies("plan.json", [])
     fertig = lies("gepostet.json", {})
     jetzt = datetime.datetime.now(BERLIN)
+    if "--warten" in a:
+        print(warten(plan, fertig, jetzt))
+        return 0
     heute, uhr = jetzt.date().isoformat(), jetzt.strftime("%H:%M")
     if trocken and "--am" in a:   # Probe: --trocken --am 2026-10-20 23:59
         heute, uhr = a[a.index("--am") + 1], a[a.index("--am") + 2]
@@ -193,7 +211,18 @@ def main():
         return 0
     if fertig.get("_schluessel_geprueft", {}).get("datum") != heute:   # einmal täglich nur lesend prüfen (sichtbar in gepostet.json)
         token = token_holen()
-        me = api("GET", "me", {"fields": "username"}, token)
+        try:
+            me = api("GET", "me", {"fields": "username"}, token)
+        except Exception as ex:   # 20.10.2026: Meta sperrte („API access blocked.“), bis Marcel sein Facebook-Konto verifizierte
+            if faellig and fertig.get("_schluessel_fehler") != heute:   # einmal am Tag warnen, nur wenn etwas posten soll
+                fertig["_schluessel_fehler"] = heute
+                schreibe("gepostet.json", fertig)
+                try:
+                    telegram("sendMessage", {"text": "⚠️ Mira: Instagram lässt das Programm gerade nicht rein (%s).\n"
+                                             "Bis das gelöst ist, geht nichts online. Schreib im Mira-Fenster „/weiter“." % ex})
+                except Exception as tx:
+                    print("TELEGRAM FEHLER", tx)
+            raise
         fertig["_schluessel_geprueft"] = {"datum": heute, "uhr": uhr, "konto": me.get("username")}
         schreibe("gepostet.json", fertig)
         print("Schlüssel ok:", me.get("username"))
