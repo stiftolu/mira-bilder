@@ -5,7 +5,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-01/07-30_T01-story-0730-strassenecke-kaffee.jpg"
+   "plan/Tag-01/07-30_T01-story-0730-strassenecke-kaffee.mp4"
   ],
   "text": null
  },
@@ -15,7 +15,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-01/12-30_T01-story-1230-haustuer-besichtigung.jpg"
+   "plan/Tag-01/12-30_T01-story-1230-haustuer-besichtigung.mp4"
   ],
   "text": null
  },
@@ -25,7 +25,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-01/16-30_T01-story-1630-auto-abendlicht.jpg"
+   "plan/Tag-01/16-30_T01-story-1630-auto-abendlicht.mp4"
   ],
   "text": null
  },
@@ -35,14 +35,14 @@
   "zeit": "18:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-01/01_K1-S1-korsage-fenster.jpg",
-   "plan/Tag-01/02_K1-S2-mappe-sideboard.jpg",
-   "plan/Tag-01/03_K1-S3-kuecheninsel-espresso.jpg",
-   "plan/Tag-01/04_K1-S4-spiegel-bad.jpg",
-   "plan/Tag-01/05_K1-S5-kuechenfenster-schulter.jpg",
-   "plan/Tag-01/06_K1-S6-sessellehne-pumps.jpg",
-   "plan/Tag-01/07_K1-S7-selfie-tuer-schluessel.jpg",
-   "plan/Tag-01/08_K1-S8-tuer-blick-zurueck.jpg"
+   "plan/Tag-01/01_K1-S1-korsage-fenster.mp4",
+   "plan/Tag-01/02_K1-S2-mappe-sideboard.mp4",
+   "plan/Tag-01/03_K1-S3-kuecheninsel-espresso.mp4",
+   "plan/Tag-01/04_K1-S4-spiegel-bad.mp4",
+   "plan/Tag-01/05_K1-S5-kuechenfenster-schulter.mp4",
+   "plan/Tag-01/06_K1-S6-sessellehne-pumps.mp4",
+   "plan/Tag-01/07_K1-S7-selfie-tuer-schluessel.mp4",
+   "plan/Tag-01/08_K1-S8-tuer-blick-zurueck.mp4"
   ],
   "text": "Dienstag, 7 Uhr: Espresso, Blazer, erster Termin. Wie fängt eure Woche an?"
  },
@@ -52,7 +52,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-01/21-30_T01-story-2130-buero-lacht.jpg"
+   "plan/Tag-01/21-30_T01-story-2130-buero-lacht.mp4"
   ],
   "text": null
  },
@@ -62,7 +62,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-02/07-30_training-07-bad.jpg"
+   "plan/Tag-02/07-30_training-07-bad.mp4"
   ],
   "text": null
  },
@@ -72,7 +72,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-02/12-30_T02-1230-leere-wohnung-dreht-sich.jpg"
+   "plan/Tag-02/12-30_T02-1230-leere-wohnung-dreht-sich.mp4"
   ],
   "text": null
  },
@@ -82,7 +82,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-02/21-30_T02-story-2130-sofa-heels-aus.jpg"
+   "plan/Tag-02/21-30_T02-story-2130-sofa-heels-aus.mp4"
   ],
   "text": null
  },
@@ -92,7 +92,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-03/07-30_T03-story-0730-kueche-mantel.jpg"
+   "plan/Tag-03/07-30_T03-story-0730-kueche-mantel.mp4"
   ],
   "text": null
  },
@@ -102,7 +102,7 @@
   "zeit": "08:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-03/08-00_K04-S2-villa-nebel.jpg"
+   "plan/Tag-03/08-00_K04-S2-villa-nebel.mp4"
   ],
   "text": null
  },
@@ -112,7 +112,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-03/12-30_T03-story-1230-cafe-mittag.jpg"
+   "plan/Tag-03/12-30_T03-story-1230-cafe-mittag.mp4"
   ],
   "text": null
  },
@@ -122,7 +122,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-03/16-30_T03-story-1630-buerofenster.jpg"
+   "plan/Tag-03/16-30_T03-story-1630-buerofenster.mp4"
   ],
   "text": null
  },
@@ -132,14 +132,14 @@
   "zeit": "18:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-03/01_K2-S1-steg-mantel-wind.jpg",
-   "plan/Tag-03/02_K2-S2-villa-rasen-zurueck.jpg",
-   "plan/Tag-03/03_K04-S1-steg-villa.jpg",
-   "plan/Tag-03/04_K2-S4-glasfront-lehnt.jpg",
-   "plan/Tag-03/05_K2-S5-profil-nebel.jpg",
-   "plan/Tag-03/06_K2-S6-glastreppe.jpg",
-   "plan/Tag-03/07_K2-S7-pool-mantel-wind.jpg",
-   "plan/Tag-03/08_K2-S8-spiegel-selfie-flur.jpg"
+   "plan/Tag-03/01_K2-S1-steg-mantel-wind.mp4",
+   "plan/Tag-03/02_K2-S2-villa-rasen-zurueck.mp4",
+   "plan/Tag-03/03_K04-S1-steg-villa.mp4",
+   "plan/Tag-03/04_K2-S4-glasfront-lehnt.mp4",
+   "plan/Tag-03/05_K2-S5-profil-nebel.mp4",
+   "plan/Tag-03/06_K2-S6-glastreppe.mp4",
+   "plan/Tag-03/07_K2-S7-pool-mantel-wind.mp4",
+   "plan/Tag-03/08_K2-S8-spiegel-selfie-flur.mp4"
   ],
   "text": "7:20 Uhr, der See ist noch weg. Einer der Morgen, für die ich diesen Job mache. Seid ihr auch Frühaufsteher?"
  },
@@ -149,7 +149,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-03/21-30_T03-story-2130-samtsessel-kerze.jpg"
+   "plan/Tag-03/21-30_T03-story-2130-samtsessel-kerze.mp4"
   ],
   "text": null
  },
@@ -159,7 +159,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-04/07-30_training-02-auto.jpg"
+   "plan/Tag-04/07-30_training-02-auto.mp4"
   ],
   "text": null
  },
@@ -169,7 +169,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-04/12-30_T04-story-1230-cafe-terrasse.jpg"
+   "plan/Tag-04/12-30_T04-story-1230-cafe-terrasse.mp4"
   ],
   "text": null
  },
@@ -179,7 +179,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-04/17-30_T04-story-1730-flur-blazer-haken.jpg"
+   "plan/Tag-04/17-30_T04-story-1730-flur-blazer-haken.mp4"
   ],
   "text": null
  },
@@ -189,7 +189,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-04/21-30_T04-story-2130-terrasse-laternen.jpg"
+   "plan/Tag-04/21-30_T04-story-2130-terrasse-laternen.mp4"
   ],
   "text": null
  },
@@ -199,7 +199,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-05/10-00_T05-1000-lauf-rosental.jpg"
+   "plan/Tag-05/10-00_T05-1000-lauf-rosental.mp4"
   ],
   "text": null
  },
@@ -209,7 +209,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-05/14-00_T05-story-1400-kueche-nach-lauf.jpg"
+   "plan/Tag-05/14-00_T05-story-1400-kueche-nach-lauf.mp4"
   ],
   "text": null
  },
@@ -219,7 +219,7 @@
   "zeit": "19:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-05/19-30_T05-story-1930-hof-haustuer.jpg"
+   "plan/Tag-05/19-30_T05-story-1930-hof-haustuer.mp4"
   ],
   "text": null
  },
@@ -229,7 +229,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-05/21-00_T05-story-2100-saal-vorhang.jpg"
+   "plan/Tag-05/21-00_T05-story-2100-saal-vorhang.mp4"
   ],
   "text": null
  },
@@ -239,7 +239,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-06/10-00_K02-S5-fensterbank-buch.jpg"
+   "plan/Tag-06/10-00_K02-S5-fensterbank-buch.mp4"
   ],
   "text": null
  },
@@ -249,7 +249,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-06/14-00_T06-story-1400-flur-regenschirm.jpg"
+   "plan/Tag-06/14-00_T06-story-1400-flur-regenschirm.mp4"
   ],
   "text": null
  },
@@ -259,7 +259,7 @@
   "zeit": "17:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-06/17-00_T06-story-1700-fenster-regen.jpg"
+   "plan/Tag-06/17-00_T06-story-1700-fenster-regen.mp4"
   ],
   "text": null
  },
@@ -269,14 +269,14 @@
   "zeit": "19:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-06/01_K3-S1-foyer-treppe.jpg",
-   "plan/Tag-06/02_K3-S2-marmortreppe.jpg",
-   "plan/Tag-06/03_training-17-oper.jpg",
-   "plan/Tag-06/04_K3-S4-saeule-programmheft.jpg",
-   "plan/Tag-06/05_K3-S5-gesicht-warmes-licht.jpg",
-   "plan/Tag-06/06_K3-S6-spiegel-selfie-foyer.jpg",
-   "plan/Tag-06/07_K3-S7-nasser-platz.jpg",
-   "plan/Tag-06/08_K3-S8-hausflur-lachend.jpg"
+   "plan/Tag-06/01_K3-S1-foyer-treppe.mp4",
+   "plan/Tag-06/02_K3-S2-marmortreppe.mp4",
+   "plan/Tag-06/03_training-17-oper.mp4",
+   "plan/Tag-06/04_K3-S4-saeule-programmheft.mp4",
+   "plan/Tag-06/05_K3-S5-gesicht-warmes-licht.mp4",
+   "plan/Tag-06/06_K3-S6-spiegel-selfie-foyer.mp4",
+   "plan/Tag-06/07_K3-S7-nasser-platz.mp4",
+   "plan/Tag-06/08_K3-S8-hausflur-lachend.mp4"
   ],
   "text": "Ein Kleid, eine Treppe, ein Abend, der länger wurde als geplant. Bild 1 oder 2?"
  },
@@ -286,7 +286,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-06/21-00_T06-story-2100-samtsessel-decke.jpg"
+   "plan/Tag-06/21-00_T06-story-2100-samtsessel-decke.mp4"
   ],
   "text": null
  },
@@ -296,7 +296,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-07/07-30_training-09-aufzug.jpg"
+   "plan/Tag-07/07-30_training-09-aufzug.mp4"
   ],
   "text": null
  },
@@ -306,7 +306,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-07/17-30_T07-story-1730-park-sonne.jpg"
+   "plan/Tag-07/17-30_T07-story-1730-park-sonne.mp4"
   ],
   "text": null
  },
@@ -316,7 +316,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-07/21-30_T07-story-2130-sofa-lacht-handy.jpg"
+   "plan/Tag-07/21-30_T07-story-2130-sofa-lacht-handy.mp4"
   ],
   "text": null
  },
@@ -326,7 +326,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-08/07-30_T08-story-0730-hof-einsteigen.jpg"
+   "plan/Tag-08/07-30_T08-story-0730-hof-einsteigen.mp4"
   ],
   "text": null
  },
@@ -336,7 +336,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-08/16-30_T08-story-1630-haustuer-mappe.jpg"
+   "plan/Tag-08/16-30_T08-story-1630-haustuer-mappe.mp4"
   ],
   "text": null
  },
@@ -357,7 +357,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-08/21-30_short-01-tanke-auto.jpg"
+   "plan/Tag-08/21-30_short-01-tanke-auto.mp4"
   ],
   "text": null
  },
@@ -367,7 +367,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-09/07-30_T09-story-0730-spiegel-bad-oben.jpg"
+   "plan/Tag-09/07-30_T09-story-0730-spiegel-bad-oben.mp4"
   ],
   "text": null
  },
@@ -377,7 +377,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-09/12-30_T09-story-1230-leere-wohnung-schluessel.jpg"
+   "plan/Tag-09/12-30_T09-story-1230-leere-wohnung-schluessel.mp4"
   ],
   "text": null
  },
@@ -387,7 +387,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-09/21-30_K07-S5-auto-nachts.jpg"
+   "plan/Tag-09/21-30_K07-S5-auto-nachts.mp4"
   ],
   "text": null
  },
@@ -397,7 +397,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-10/07-30_T10-story-0730-spiegel-flur.jpg"
+   "plan/Tag-10/07-30_T10-story-0730-spiegel-flur.mp4"
   ],
   "text": null
  },
@@ -407,7 +407,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-10/12-30_T10-story-1230-schirm-innenstadt.jpg"
+   "plan/Tag-10/12-30_T10-story-1230-schirm-innenstadt.mp4"
   ],
   "text": null
  },
@@ -417,7 +417,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-10/16-30_T10-story-1630-auto-regen.jpg"
+   "plan/Tag-10/16-30_T10-story-1630-auto-regen.mp4"
   ],
   "text": null
  },
@@ -427,14 +427,14 @@
   "zeit": "18:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-10/01_K4-S1-glasfassade-laub.jpg",
-   "plan/Tag-10/02_K4-S2-gehweg-revers.jpg",
-   "plan/Tag-10/03_K05-S1-glasfassade-weiss.jpg",
-   "plan/Tag-10/04_K4-S4-foyer-aufzug.jpg",
-   "plan/Tag-10/05_K4-S5-nah-zopf-kragen.jpg",
-   "plan/Tag-10/06_K4-S6-foyer-bank.jpg",
-   "plan/Tag-10/07_K4-S7-aufzug-selfie.jpg",
-   "plan/Tag-10/08_K4-S8-glastuer-blick-zurueck.jpg"
+   "plan/Tag-10/01_K4-S1-glasfassade-laub.mp4",
+   "plan/Tag-10/02_K4-S2-gehweg-revers.mp4",
+   "plan/Tag-10/03_K05-S1-glasfassade-weiss.mp4",
+   "plan/Tag-10/04_K4-S4-foyer-aufzug.mp4",
+   "plan/Tag-10/05_K4-S5-nah-zopf-kragen.mp4",
+   "plan/Tag-10/06_K4-S6-foyer-bank.mp4",
+   "plan/Tag-10/07_K4-S7-aufzug-selfie.mp4",
+   "plan/Tag-10/08_K4-S8-glastuer-blick-zurueck.mp4"
   ],
   "text": "Weiß im Herbst? Ja. Einmal im Jahr muss das sein. Wer traut sich?"
  },
@@ -444,7 +444,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-10/21-30_T10-story-2130-samtsessel-quer.jpg"
+   "plan/Tag-10/21-30_T10-story-2130-samtsessel-quer.mp4"
   ],
   "text": null
  },
@@ -454,7 +454,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-11/07-30_K04-S5-glasfront-profil.jpg"
+   "plan/Tag-11/07-30_K04-S5-glasfront-profil.mp4"
   ],
   "text": null
  },
@@ -464,7 +464,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-11/12-30_T11-story-1230-stegende-sitzend.jpg"
+   "plan/Tag-11/12-30_T11-story-1230-stegende-sitzend.mp4"
   ],
   "text": null
  },
@@ -474,7 +474,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-11/17-30_T11-story-1730-glasvilla-sonne.jpg"
+   "plan/Tag-11/17-30_T11-story-1730-glasvilla-sonne.mp4"
   ],
   "text": null
  },
@@ -484,7 +484,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-11/21-00_K08-S4-villa-nachts.jpg"
+   "plan/Tag-11/21-00_K08-S4-villa-nachts.mp4"
   ],
   "text": null
  },
@@ -494,7 +494,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-11/21-30_T11-story-2130-glastuer-abschliessen.jpg"
+   "plan/Tag-11/21-30_T11-story-2130-glastuer-abschliessen.mp4"
   ],
   "text": null
  },
@@ -504,7 +504,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-12/14-00_T12-story-1400-dorf-kaffee.jpg"
+   "plan/Tag-12/14-00_T12-story-1400-dorf-kaffee.mp4"
   ],
   "text": null
  },
@@ -514,7 +514,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-12/16-30_training-13-hof-nach-tour.jpg"
+   "plan/Tag-12/16-30_training-13-hof-nach-tour.mp4"
   ],
   "text": null
  },
@@ -524,7 +524,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-12/21-00_T12-story-2100-sofa-baeuchlings.jpg"
+   "plan/Tag-12/21-00_T12-story-2100-sofa-baeuchlings.mp4"
   ],
   "text": null
  },
@@ -534,7 +534,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-13/10-00_T13-story-1000-schlafzimmerfenster-nebel.jpg"
+   "plan/Tag-13/10-00_T13-story-1000-schlafzimmerfenster-nebel.mp4"
   ],
   "text": null
  },
@@ -544,7 +544,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-13/14-00_T13-story-1400-kuecheninsel-pfannkuchen.jpg"
+   "plan/Tag-13/14-00_T13-story-1400-kuecheninsel-pfannkuchen.mp4"
   ],
   "text": null
  },
@@ -554,7 +554,7 @@
   "zeit": "17:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-13/17-00_K02-S4-kerze-anzuenden.jpg"
+   "plan/Tag-13/17-00_K02-S4-kerze-anzuenden.mp4"
   ],
   "text": null
  },
@@ -564,7 +564,7 @@
   "zeit": "17:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-13/17-00_T13-story-1700-kerzen-von-unten.jpg"
+   "plan/Tag-13/17-00_T13-story-1700-kerzen-von-unten.mp4"
   ],
   "text": null
  },
@@ -574,14 +574,14 @@
   "zeit": "19:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-13/01_K5-S1-landstrasse-reissverschluss.jpg",
-   "plan/Tag-13/02_K5-S2-seeufer-jacke-auf.jpg",
-   "plan/Tag-13/03_K5-S3-selfie-helm-unterm-arm.jpg",
-   "plan/Tag-13/04_K5-S4-sitz-helm-auf-tank.jpg",
-   "plan/Tag-13/05_K5-S5-nah-herbstlicht.jpg",
-   "plan/Tag-13/06_K5-S6-ufermauer-thermobecher.jpg",
-   "plan/Tag-13/07_K5-S7-laub-von-unten.jpg",
-   "plan/Tag-13/08_K5-S8-helm-aufsetzen-lachend.jpg"
+   "plan/Tag-13/01_K5-S1-landstrasse-reissverschluss.mp4",
+   "plan/Tag-13/02_K5-S2-seeufer-jacke-auf.mp4",
+   "plan/Tag-13/03_K5-S3-selfie-helm-unterm-arm.mp4",
+   "plan/Tag-13/04_K5-S4-sitz-helm-auf-tank.mp4",
+   "plan/Tag-13/05_K5-S5-nah-herbstlicht.mp4",
+   "plan/Tag-13/06_K5-S6-ufermauer-thermobecher.mp4",
+   "plan/Tag-13/07_K5-S7-laub-von-unten.mp4",
+   "plan/Tag-13/08_K5-S8-helm-aufsetzen-lachend.mp4"
   ],
   "text": "Die letzte große Tour, bevor sie in den Winterschlaf geht. Wohin wäre eure gegangen?"
  },
@@ -591,7 +591,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-13/21-00_story-sessel-korsett.jpg"
+   "plan/Tag-13/21-00_story-sessel-korsett.mp4"
   ],
   "text": null
  },
@@ -601,7 +601,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-14/07-30_T14-story-0730-rasen-nebel-kaffee.jpg"
+   "plan/Tag-14/07-30_T14-story-0730-rasen-nebel-kaffee.mp4"
   ],
   "text": null
  },
@@ -611,7 +611,7 @@
   "zeit": "07:45",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-14/07-45_K09-S3-becher-stufe.jpg"
+   "plan/Tag-14/07-45_K09-S3-becher-stufe.mp4"
   ],
   "text": null
  },
@@ -621,7 +621,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-14/12-30_T14-story-1230-dachterrasse-wind.jpg"
+   "plan/Tag-14/12-30_T14-story-1230-dachterrasse-wind.mp4"
   ],
   "text": null
  },
@@ -631,7 +631,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-14/17-30_K09-S4-treppe-stiefel.jpg"
+   "plan/Tag-14/17-30_K09-S4-treppe-stiefel.mp4"
   ],
   "text": null
  },
@@ -641,7 +641,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-14/21-30_T14-story-2130-kleiderschrank-kleid.jpg"
+   "plan/Tag-14/21-30_T14-story-2130-kleiderschrank-kleid.mp4"
   ],
   "text": null
  },
@@ -651,7 +651,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-15/07-30_T15-story-0730-bad-kragen.jpg"
+   "plan/Tag-15/07-30_T15-story-0730-bad-kragen.mp4"
   ],
   "text": null
  },
@@ -661,7 +661,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-15/12-30_T15-story-1230-cafe-fenster.jpg"
+   "plan/Tag-15/12-30_T15-story-1230-cafe-fenster.mp4"
   ],
   "text": null
  },
@@ -671,7 +671,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-15/16-30_T15-story-1630-treppenhaus-mappe-hoch.jpg"
+   "plan/Tag-15/16-30_T15-story-1630-treppenhaus-mappe-hoch.mp4"
   ],
   "text": null
  },
@@ -681,14 +681,14 @@
   "zeit": "18:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-15/01_K6-S1-buerofenster-gegenlicht.jpg",
-   "plan/Tag-15/02_K6-S2-mappe-ablegen.jpg",
-   "plan/Tag-15/03_K05-S6-buerostuhl.jpg",
-   "plan/Tag-15/04_K6-S4-schreibtisch-unterschreibt.jpg",
-   "plan/Tag-15/05_K6-S5-nah-gegenlicht.jpg",
-   "plan/Tag-15/06_K6-S6-spiegel-selfie-bueroflur.jpg",
-   "plan/Tag-15/07_K6-S7-konferenztisch.jpg",
-   "plan/Tag-15/08_K6-S8-flur-lachend-mappe.jpg"
+   "plan/Tag-15/01_K6-S1-buerofenster-gegenlicht.mp4",
+   "plan/Tag-15/02_K6-S2-mappe-ablegen.mp4",
+   "plan/Tag-15/03_K05-S6-buerostuhl.mp4",
+   "plan/Tag-15/04_K6-S4-schreibtisch-unterschreibt.mp4",
+   "plan/Tag-15/05_K6-S5-nah-gegenlicht.mp4",
+   "plan/Tag-15/06_K6-S6-spiegel-selfie-bueroflur.mp4",
+   "plan/Tag-15/07_K6-S7-konferenztisch.mp4",
+   "plan/Tag-15/08_K6-S8-flur-lachend-mappe.mp4"
   ],
   "text": "Das Beste an diesem Büro ist 18 Uhr. Wo schaut ihr beim Arbeiten raus?"
  },
@@ -698,7 +698,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-15/21-30_T15-story-2130-kuechenboden-heels.jpg"
+   "plan/Tag-15/21-30_T15-story-2130-kuechenboden-heels.mp4"
   ],
   "text": null
  },
@@ -708,7 +708,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-16/07-30_T16-story-0730-wohnungstuer-mantel.jpg"
+   "plan/Tag-16/07-30_T16-story-0730-wohnungstuer-mantel.mp4"
   ],
   "text": null
  },
@@ -718,7 +718,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-16/12-30_T16-story-1230-buero-schluesselbund.jpg"
+   "plan/Tag-16/12-30_T16-story-1230-buero-schluesselbund.mp4"
   ],
   "text": null
  },
@@ -728,7 +728,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-16/17-30_T16-story-1730-tiefgarage-mantel.jpg"
+   "plan/Tag-16/17-30_T16-story-1730-tiefgarage-mantel.mp4"
   ],
   "text": null
  },
@@ -738,7 +738,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-16/21-30_T16-story-2130-flur-mantel-aus.jpg"
+   "plan/Tag-16/21-30_T16-story-2130-flur-mantel-aus.mp4"
   ],
   "text": null
  },
@@ -748,7 +748,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-17/07-30_T17-story-0730-haustuer-blazer.jpg"
+   "plan/Tag-17/07-30_T17-story-0730-haustuer-blazer.mp4"
   ],
   "text": null
  },
@@ -758,7 +758,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-17/12-30_T17-story-1230-parkbank-apfel.jpg"
+   "plan/Tag-17/12-30_T17-story-1230-parkbank-apfel.mp4"
   ],
   "text": null
  },
@@ -768,7 +768,7 @@
   "zeit": "16:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-17/16-00_T17-story-1600-buerokueche-kaffee.jpg"
+   "plan/Tag-17/16-00_T17-story-1600-buerokueche-kaffee.mp4"
   ],
   "text": null
  },
@@ -778,13 +778,13 @@
   "zeit": "17:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-17/01_K7-S1-gasse-laternen.jpg",
-   "plan/Tag-17/02_K7-S2-gasse-dreht-sich-um.jpg",
-   "plan/Tag-17/03_training-20-schaufenster.jpg",
-   "plan/Tag-17/04_K7-S4-hauswand-gelehnt.jpg",
-   "plan/Tag-17/05_K7-S5-nah-kragen-hoch.jpg",
-   "plan/Tag-17/06_K7-S6-selfie-stadtlichter.jpg",
-   "plan/Tag-17/07_K7-S8-stufen-altbautuer-lachend.jpg"
+   "plan/Tag-17/01_K7-S1-gasse-laternen.mp4",
+   "plan/Tag-17/02_K7-S2-gasse-dreht-sich-um.mp4",
+   "plan/Tag-17/03_training-20-schaufenster.mp4",
+   "plan/Tag-17/04_K7-S4-hauswand-gelehnt.mp4",
+   "plan/Tag-17/05_K7-S5-nah-kragen-hoch.mp4",
+   "plan/Tag-17/06_K7-S6-selfie-stadtlichter.mp4",
+   "plan/Tag-17/07_K7-S8-stufen-altbautuer-lachend.mp4"
   ],
   "text": "Gestern, 19:04 Uhr. Genau die zehn Minuten, in denen die Stadt blau wird. Stadt oder Land?"
  },
@@ -794,7 +794,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-17/21-30_T17-story-2130-taxi-nachts.jpg"
+   "plan/Tag-17/21-30_T17-story-2130-taxi-nachts.mp4"
   ],
   "text": null
  },
@@ -804,7 +804,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-18/07-30_T18-story-0730-treppenhaus-mantel.jpg"
+   "plan/Tag-18/07-30_T18-story-0730-treppenhaus-mantel.mp4"
   ],
   "text": null
  },
@@ -814,7 +814,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-18/17-30_K09-S5-zopf-im-wind.jpg"
+   "plan/Tag-18/17-30_K09-S5-zopf-im-wind.mp4"
   ],
   "text": null
  },
@@ -824,7 +824,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-19/10-00_K06-S3-hand-tank.jpg"
+   "plan/Tag-19/10-00_K06-S3-hand-tank.mp4"
   ],
   "text": null
  },
@@ -834,7 +834,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-19/10-00_T19-story-1000-motorrad-schulter.jpg"
+   "plan/Tag-19/10-00_T19-story-1000-motorrad-schulter.mp4"
   ],
   "text": null
  },
@@ -844,7 +844,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-19/14-00_T19-story-1400-garage-lederjacke.jpg"
+   "plan/Tag-19/14-00_T19-story-1400-garage-lederjacke.mp4"
   ],
   "text": null
  },
@@ -854,7 +854,7 @@
   "zeit": "19:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-19/19-30_T19-story-1930-garage-plane.jpg"
+   "plan/Tag-19/19-30_T19-story-1930-garage-plane.mp4"
   ],
   "text": null
  },
@@ -864,7 +864,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-19/21-00_T19-story-2100-sofalehne-zopf-auf.jpg"
+   "plan/Tag-19/21-00_T19-story-2100-sofalehne-zopf-auf.mp4"
   ],
   "text": null
  },
@@ -874,7 +874,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-20/10-00_training-16-mallorca-pool.jpg"
+   "plan/Tag-20/10-00_training-16-mallorca-pool.mp4"
   ],
   "text": null
  },
@@ -884,7 +884,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-20/14-00_T20-story-1400-sofa-laptop.jpg"
+   "plan/Tag-20/14-00_T20-story-1400-sofa-laptop.mp4"
   ],
   "text": null
  },
@@ -894,7 +894,7 @@
   "zeit": "17:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-20/17-00_T20-story-1700-terrasse-decke-laub.jpg"
+   "plan/Tag-20/17-00_T20-story-1700-terrasse-decke-laub.mp4"
   ],
   "text": null
  },
@@ -904,14 +904,14 @@
   "zeit": "19:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-20/01_K08-S6-stegende.jpg",
-   "plan/Tag-20/02_training-15-saisonstart.jpg",
-   "plan/Tag-20/03_training-11-penthouse.jpg",
-   "plan/Tag-20/04_training-05-cafe.jpg",
-   "plan/Tag-20/05_training-10-villa-aufschliessen.jpg",
-   "plan/Tag-20/06_training-14-jahresfeier.jpg",
-   "plan/Tag-20/07_K8-S7-terrasse-sommerabend.jpg",
-   "plan/Tag-20/08_profil-sommer-steg.jpg"
+   "plan/Tag-20/01_K08-S6-stegende.mp4",
+   "plan/Tag-20/02_training-15-saisonstart.mp4",
+   "plan/Tag-20/03_training-11-penthouse.mp4",
+   "plan/Tag-20/04_training-05-cafe.mp4",
+   "plan/Tag-20/05_training-10-villa-aufschliessen.mp4",
+   "plan/Tag-20/06_training-14-jahresfeier.mp4",
+   "plan/Tag-20/07_K8-S7-terrasse-sommerabend.mp4",
+   "plan/Tag-20/08_profil-sommer-steg.mp4"
   ],
   "text": "Mein Frühling und Sommer in acht Bildern. Welches ist eures?"
  },
@@ -921,7 +921,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-20/21-00_training-04-terrasse.jpg"
+   "plan/Tag-20/21-00_training-04-terrasse.mp4"
   ],
   "text": null
  },
@@ -931,7 +931,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-21/07-30_T21-story-0730-baecker-mantel.jpg"
+   "plan/Tag-21/07-30_T21-story-0730-baecker-mantel.mp4"
   ],
   "text": null
  },
@@ -941,7 +941,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-21/12-30_T21-story-1230-leere-wohnung-boden.jpg"
+   "plan/Tag-21/12-30_T21-story-1230-leere-wohnung-boden.mp4"
   ],
   "text": null
  },
@@ -951,7 +951,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-21/17-30_T21-story-1730-hof-autotuer.jpg"
+   "plan/Tag-21/17-30_T21-story-1730-hof-autotuer.mp4"
   ],
   "text": null
  },
@@ -961,7 +961,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-21/21-30_training-06-sessel.jpg"
+   "plan/Tag-21/21-30_training-06-sessel.mp4"
   ],
   "text": null
  },
@@ -971,7 +971,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-22/07-30_T22-story-0730-hoftor-kaffee.jpg"
+   "plan/Tag-22/07-30_T22-story-0730-hoftor-kaffee.mp4"
   ],
   "text": null
  },
@@ -981,7 +981,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-22/12-30_T22-story-1230-buero-fuesse-tisch.jpg"
+   "plan/Tag-22/12-30_T22-story-1230-buero-fuesse-tisch.mp4"
   ],
   "text": null
  },
@@ -991,7 +991,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-22/16-30_T22-story-1630-kanal.jpg"
+   "plan/Tag-22/16-30_T22-story-1630-kanal.mp4"
   ],
   "text": null
  },
@@ -1001,7 +1001,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-22/21-30_T22-story-2130-kueche-tanzt.jpg"
+   "plan/Tag-22/21-30_T22-story-2130-kueche-tanzt.mp4"
   ],
   "text": null
  },
@@ -1011,7 +1011,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-23/07-30_T23-business-fenster-blazer.jpg"
+   "plan/Tag-23/07-30_T23-business-fenster-blazer.mp4"
   ],
   "text": null
  },
@@ -1021,7 +1021,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-23/12-30_T23-story-1230-villa-treppe.jpg"
+   "plan/Tag-23/12-30_T23-story-1230-villa-treppe.mp4"
   ],
   "text": null
  },
@@ -1031,7 +1031,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-23/17-30_T23-business-kuechenfenster-tasse.jpg"
+   "plan/Tag-23/17-30_T23-business-kuechenfenster-tasse.mp4"
   ],
   "text": null
  },
@@ -1041,7 +1041,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-23/21-30_T23-business-wohnzimmer-mappe.jpg"
+   "plan/Tag-23/21-30_T23-business-wohnzimmer-mappe.mp4"
   ],
   "text": null
  },
@@ -1051,7 +1051,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-24/07-30_T24-story-0730-kuecheninsel-laptop.jpg"
+   "plan/Tag-24/07-30_T24-story-0730-kuecheninsel-laptop.mp4"
   ],
   "text": null
  },
@@ -1061,7 +1061,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-24/10-00_K09-S6-garten-nebel.jpg"
+   "plan/Tag-24/10-00_K09-S6-garten-nebel.mp4"
   ],
   "text": null
  },
@@ -1071,7 +1071,7 @@
   "zeit": "16:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-24/16-30_T24-story-1630-plattenspieler.jpg"
+   "plan/Tag-24/16-30_T24-story-1630-plattenspieler.mp4"
   ],
   "text": null
  },
@@ -1081,14 +1081,14 @@
   "zeit": "18:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-24/01_K9-S1-baum-laub.jpg",
-   "plan/Tag-24/02_K9-S2-gartenweg-hecken.jpg",
-   "plan/Tag-24/03_K09-S1-garten-zopf.jpg",
-   "plan/Tag-24/04_K9-S4-laterne-taschen.jpg",
-   "plan/Tag-24/05_K9-S5-nah-laub.jpg",
-   "plan/Tag-24/06_K9-S6-selfie-lounge-sofa.jpg",
-   "plan/Tag-24/07_K9-S7-mauer-mantel-schulter.jpg",
-   "plan/Tag-24/08_K9-S8-terrassentuer-arm.jpg"
+   "plan/Tag-24/01_K9-S1-baum-laub.mp4",
+   "plan/Tag-24/02_K9-S2-gartenweg-hecken.mp4",
+   "plan/Tag-24/03_K09-S1-garten-zopf.mp4",
+   "plan/Tag-24/04_K9-S4-laterne-taschen.mp4",
+   "plan/Tag-24/05_K9-S5-nah-laub.mp4",
+   "plan/Tag-24/06_K9-S6-selfie-lounge-sofa.mp4",
+   "plan/Tag-24/07_K9-S7-mauer-mantel-schulter.mp4",
+   "plan/Tag-24/08_K9-S8-terrassentuer-arm.mp4"
   ],
   "text": "Der Garten wird gelb und ich hab kein Problem damit. Wo trinkt ihr euren Kaffee am liebsten?"
  },
@@ -1098,7 +1098,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-24/21-30_T24-story-2130-bett-stiefel.jpg"
+   "plan/Tag-24/21-30_T24-story-2130-bett-stiefel.mp4"
   ],
   "text": null
  },
@@ -1108,7 +1108,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-25/07-30_T25-story-0730-schlafzimmer-sonnenaufgang.jpg"
+   "plan/Tag-25/07-30_T25-story-0730-schlafzimmer-sonnenaufgang.mp4"
   ],
   "text": null
  },
@@ -1118,7 +1118,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-25/12-30_T25-story-1230-hortensien-kaufen.jpg"
+   "plan/Tag-25/12-30_T25-story-1230-hortensien-kaufen.mp4"
   ],
   "text": null
  },
@@ -1128,7 +1128,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-25/17-30_T25-story-1730-hortensien-vase.jpg"
+   "plan/Tag-25/17-30_T25-story-1730-hortensien-vase.mp4"
   ],
   "text": null
  },
@@ -1138,7 +1138,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-25/21-00_K02-S6-terrasse-abend.jpg"
+   "plan/Tag-25/21-00_K02-S6-terrasse-abend.mp4"
   ],
   "text": null
  },
@@ -1148,7 +1148,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-25/21-30_T25-story-2130-terrassenlaterne.jpg"
+   "plan/Tag-25/21-30_T25-story-2130-terrassenlaterne.mp4"
   ],
   "text": null
  },
@@ -1158,7 +1158,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-26/10-00_T26-story-1000-wochenmarkt.jpg"
+   "plan/Tag-26/10-00_T26-story-1000-wochenmarkt.mp4"
   ],
   "text": null
  },
@@ -1168,7 +1168,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-26/14-00_T26-story-1400-kuerbis-auspacken.jpg"
+   "plan/Tag-26/14-00_T26-story-1400-kuerbis-auspacken.mp4"
   ],
   "text": null
  },
@@ -1178,7 +1178,7 @@
   "zeit": "17:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-26/17-00_K02-S2-wohnzimmer-weit.jpg"
+   "plan/Tag-26/17-00_K02-S2-wohnzimmer-weit.mp4"
   ],
   "text": null
  },
@@ -1188,7 +1188,7 @@
   "zeit": "19:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-26/19-30_T26-story-1930-kuerbis-schnitzen.jpg"
+   "plan/Tag-26/19-30_T26-story-1930-kuerbis-schnitzen.mp4"
   ],
   "text": null
  },
@@ -1198,7 +1198,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-26/21-00_T26-story-2100-regenfenster-kerze.jpg"
+   "plan/Tag-26/21-00_T26-story-2100-regenfenster-kerze.mp4"
   ],
   "text": null
  },
@@ -1208,7 +1208,7 @@
   "zeit": "10:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-27/10-00_T27-story-1000-yogamatte.jpg"
+   "plan/Tag-27/10-00_T27-story-1000-yogamatte.mp4"
   ],
   "text": null
  },
@@ -1218,7 +1218,7 @@
   "zeit": "14:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-27/14-00_T27-story-1400-karte-schreiben.jpg"
+   "plan/Tag-27/14-00_T27-story-1400-karte-schreiben.mp4"
   ],
   "text": null
  },
@@ -1228,7 +1228,7 @@
   "zeit": "17:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-27/17-00_T27-story-1700-kuechenfenster-tee.jpg"
+   "plan/Tag-27/17-00_T27-story-1700-kuechenfenster-tee.mp4"
   ],
   "text": null
  },
@@ -1238,14 +1238,14 @@
   "zeit": "19:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-27/01_K10-S1-yoga-balance.jpg",
-   "plan/Tag-27/02_K10-S2-fenster-rahmen.jpg",
-   "plan/Tag-27/03_training-21-sofa.jpg",
-   "plan/Tag-27/04_K10-S4-regal-buch.jpg",
-   "plan/Tag-27/05_K10-S5-nah-kerze.jpg",
-   "plan/Tag-27/06_K10-S6-dehnen-matte.jpg",
-   "plan/Tag-27/07_K10-S7-seilspringen.jpg",
-   "plan/Tag-27/08_K10-S8-sofa-fallen-lachend.jpg"
+   "plan/Tag-27/01_K10-S1-yoga-balance.mp4",
+   "plan/Tag-27/02_K10-S2-fenster-rahmen.mp4",
+   "plan/Tag-27/03_training-21-sofa.mp4",
+   "plan/Tag-27/04_K10-S4-regal-buch.mp4",
+   "plan/Tag-27/05_K10-S5-nah-kerze.mp4",
+   "plan/Tag-27/06_K10-S6-dehnen-matte.mp4",
+   "plan/Tag-27/07_K10-S7-seilspringen.mp4",
+   "plan/Tag-27/08_K10-S8-sofa-fallen-lachend.mp4"
   ],
   "text": "Grauer Himmel, Kerzen, nichts vor. Mein perfekter Sonntag. Wie sieht eurer aus?"
  },
@@ -1255,7 +1255,7 @@
   "zeit": "21:00",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-27/21-00_T27-story-2100-terrassentuer.jpg"
+   "plan/Tag-27/21-00_T27-story-2100-terrassentuer.mp4"
   ],
   "text": null
  },
@@ -1265,7 +1265,7 @@
   "zeit": "07:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-28/07-30_T28-story-0730-hof-frost.jpg"
+   "plan/Tag-28/07-30_T28-story-0730-hof-frost.mp4"
   ],
   "text": null
  },
@@ -1275,7 +1275,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-28/12-30_T28-story-1230-buerohaus-wind.jpg"
+   "plan/Tag-28/12-30_T28-story-1230-buerohaus-wind.mp4"
   ],
   "text": null
  },
@@ -1285,7 +1285,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-28/17-30_story-nacht-selfie-a.jpg"
+   "plan/Tag-28/17-30_story-nacht-selfie-a.mp4"
   ],
   "text": null
  },
@@ -1295,7 +1295,7 @@
   "zeit": "21:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-28/21-30_story-nacht-selfie-b.jpg"
+   "plan/Tag-28/21-30_story-nacht-selfie-b.mp4"
   ],
   "text": null
  },
@@ -1305,7 +1305,7 @@
   "zeit": "12:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-29/12-30_T02-story-1730-wohnzimmer-tasche.jpg"
+   "plan/Tag-29/12-30_T02-story-1730-wohnzimmer-tasche.mp4"
   ],
   "text": null
  },
@@ -1315,7 +1315,7 @@
   "zeit": "17:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-29/17-30_training-12-buero-abends.jpg"
+   "plan/Tag-29/17-30_training-12-buero-abends.mp4"
   ],
   "text": null
  },
@@ -1325,15 +1325,15 @@
   "zeit": "19:00",
   "art": "KARUSSELL",
   "dateien": [
-   "plan/Tag-29/01_training-19-steg.jpg",
-   "plan/Tag-29/02_training-01-bett.jpg",
-   "plan/Tag-29/03_training-03-garage.jpg",
-   "plan/Tag-29/04_training-08-badeanzug.jpg",
-   "plan/Tag-29/05_training-22-boden.jpg",
-   "plan/Tag-29/06_profil-selfie-bad-neu.jpg",
-   "plan/Tag-29/07_K10-S1-creole-einstecken.jpg",
-   "plan/Tag-29/08_hof-g-klasse-einsteigen.jpg",
-   "plan/Tag-29/09_K01-S3-kuecheninsel.jpg"
+   "plan/Tag-29/01_training-19-steg.mp4",
+   "plan/Tag-29/02_training-01-bett.mp4",
+   "plan/Tag-29/03_training-03-garage.mp4",
+   "plan/Tag-29/04_training-08-badeanzug.mp4",
+   "plan/Tag-29/05_training-22-boden.mp4",
+   "plan/Tag-29/06_profil-selfie-bad-neu.mp4",
+   "plan/Tag-29/07_K10-S1-creole-einstecken.mp4",
+   "plan/Tag-29/08_hof-g-klasse-einsteigen.mp4",
+   "plan/Tag-29/09_K01-S3-kuecheninsel.mp4"
   ],
   "text": "Mein Jahr in 9 Bildern. Welches ist euer Lieblingsbild?"
  },
@@ -1343,7 +1343,7 @@
   "zeit": "20:30",
   "art": "STORY",
   "dateien": [
-   "plan/Tag-29/20-30_training-18-geburtstag.jpg"
+   "plan/Tag-29/20-30_training-18-geburtstag.mp4"
   ],
   "text": null
  }

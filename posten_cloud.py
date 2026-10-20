@@ -69,17 +69,24 @@ def url(pfad):
     return RAW + urllib.parse.quote(pfad)
 
 
+def ist_video(p):
+    return p.lower().endswith(".mp4")
+
+
 def container(s, token):
+    """Seit 20.10.2026 sind Stories + Karussell-Seiten meist Clips mit Musik (.mp4, gebaut von clips.py auf dem Laptop)."""
     art, dateien, text = s["art"], s["dateien"], s.get("text")
     if art == "STORY":
-        cid = api("POST", IG_ID + "/media", {"image_url": url(dateien[0]), "media_type": "STORIES", "is_ai_generated": "true"}, token)["id"]
+        quelle = {"video_url": url(dateien[0])} if ist_video(dateien[0]) else {"image_url": url(dateien[0])}
+        cid = api("POST", IG_ID + "/media", dict(quelle, media_type="STORIES", is_ai_generated="true"), token)["id"]
     elif art == "REEL":
         d = {"media_type": "REELS", "video_url": url(dateien[0]), "caption": text, "share_to_feed": "true", "is_ai_generated": "true"}
         if len(dateien) > 1:
             d["cover_url"] = url(dateien[1])
         cid = api("POST", IG_ID + "/media", d, token)["id"]
     else:
-        kinder = [api("POST", IG_ID + "/media", {"image_url": url(p), "is_carousel_item": "true"}, token)["id"] for p in dateien]
+        kinder = [api("POST", IG_ID + "/media", ({"video_url": url(p), "media_type": "VIDEO"} if ist_video(p) else {"image_url": url(p)})
+                      | {"is_carousel_item": "true"}, token)["id"] for p in dateien]
         for k in kinder:   # KI-Kennzeichen nur am Sammel-Container (an den Kindern = Fehler)
             warte_fertig(k, token)
         cid = api("POST", IG_ID + "/media", {"media_type": "CAROUSEL", "children": ",".join(kinder), "caption": text,
@@ -147,11 +154,11 @@ def melden(s, mid, token):
             pass   # ohne Link melden
     text = text[:1024]   # Telegram-Grenze für Bildunterschriften
     dateien = s["dateien"]
-    if s["art"] == "REEL":
-        return telegram("sendVideo", {"caption": text, "supports_streaming": "true"}, [("video", dateien[0])])
-    if s["art"] == "STORY" or len(dateien) == 1:
+    if s["art"] == "STORY" or len(dateien) == 1 or s["art"] == "REEL":
+        if ist_video(dateien[0]):
+            return telegram("sendVideo", {"caption": text, "supports_streaming": "true"}, [("video", dateien[0])])
         return telegram("sendPhoto", {"caption": text}, [("photo", dateien[0])])
-    medien = [{"type": "photo", "media": "attach://f%d" % i} for i in range(len(dateien))]
+    medien = [{"type": "video" if ist_video(p) else "photo", "media": "attach://f%d" % i} for i, p in enumerate(dateien)]
     medien[0]["caption"] = text
     return telegram("sendMediaGroup", {"media": json.dumps(medien, ensure_ascii=False)},
                     [("f%d" % i, p) for i, p in enumerate(dateien)])
