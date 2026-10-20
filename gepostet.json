@@ -1,8 +1,24 @@
 {
  "_fehlversuche": {},
  "_schluessel_geprueft": {
-  "datum": "2026-10-19",
-  "uhr": "00:40",
+  "datum": "2026-10-20",
+  "uhr": "17:33",
   "konto": "mira_sommerfeld_"
+ },
+ "_container": {},
+ "Tag-01 story 07-30_T01-story-0730-strassenecke-kaffee.jpg": {
+  "id": "18341424409262342",
+  "zeit": "2026-10-20T17:33:27+02:00",
+  "telegram": "ok"
+ },
+ "Tag-01 story 12-30_T01-story-1230-haustuer-besichtigung.jpg": {
+  "id": "18114844775094882",
+  "zeit": "2026-10-20T17:33:35+02:00",
+  "telegram": "ok"
+ },
+ "Tag-01 story 16-30_T01-story-1630-auto-abendlicht.jpg": {
+  "id": "17979244115918152",
+  "zeit": "2026-10-20T17:33:44+02:00",
+  "telegram": "ok"
  }
 }
